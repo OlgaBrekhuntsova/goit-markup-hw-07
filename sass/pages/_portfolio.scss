@@ -1,0 +1,181 @@
+/*PORTFOLIO*/
+.portfolio-header {
+  border-bottom: 1px solid #ececec;
+}
+.portfolio h2 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.portfolio-filters .container {
+  padding-top: 93px;
+  padding-bottom: 25px;
+}
+.portfolio-filters-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.portfolio-filters-list-item:not(:last-child) {
+  margin-right: 8px;
+}
+.portfolio-modal-btn {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+  border-radius: 4px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $title-light-theme-color;
+  background-color: $rectangle-background-color;
+  -webkit-transition-property: background-color box-shadow color;
+  -o-transition-property: background-color box-shadow color;
+  transition-property: background-color box-shadow color;
+  -webkit-transition-duration: $transition-time;
+       -o-transition-duration: $transition-time;
+          transition-duration: $transition-time;
+  -webkit-transition-timing-function: $transition-function;
+       -o-transition-timing-function: $transition-function;
+          transition-timing-function: $transition-function;
+}
+.portfolio-modal-btn:hover,
+.portfolio-modal-btn:focus {
+  background-color: $svg-color-accent;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  color: $title-dark-theme-color;
+}
+.portfolio-projects .container {
+  padding-top: 25px;
+  padding-bottom: 94px;
+}
+.portfolio-projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.portfolio-projects-list-link {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: $title-dark-theme-color;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  -o-transition-property: box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: $transition-time;
+       -o-transition-duration: $transition-time;
+          transition-duration: $transition-time;
+  -webkit-transition-timing-function: $transition-function;
+       -o-transition-timing-function: $transition-function;
+          transition-timing-function: $transition-function;
+}
+.portfolio-projects-list-link:hover,
+.portfolio-projects-list-link:focus {
+  -webkit-box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+          box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
+    }
+.portfolio-projects-list-item:not(:nth-child(3n)) {
+  margin-right: 2.565%;
+}
+.portfolio-projects-list-item {
+  width: calc(94.87% / 3);
+}
+.portfolio-projects-list-item:not(:nth-last-child(-n + 3)) {
+  margin-bottom: 30px;
+}
+
+.portfolio-projects-list-link-item {
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  }
+
+.portfolio-projects-list-link-item-img {
+  width: 100%;
+  height: 100%;
+}
+.projects-name-subtitle {
+  margin-top: 0px;
+  margin-bottom: 4px;
+  margin-left: 24px;
+  padding-top: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $title-light-theme-color;
+}
+.projects-name-class {
+  margin-top: 0px;
+  margin-bottom: 0px;
+   margin-left: 24px;
+   padding-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: $text-light-theme-color;
+}
+.img-overlay {
+  position:relative;
+  overflow: hidden;
+}
+
+.projects-name-description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-right: 24px;
+  padding-left: 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: $title-dark-theme-color;
+  background-color: rgba(33, 150, 243, 0.9);
+    -webkit-transform: translateY(calc(+100% + 1px));
+        -ms-transform: translateY(calc(+100% + 1px));
+            transform: translateY(calc(+100% + 1px));
+ -webkit-transition-property: -webkit-transform;
+ transition-property: -webkit-transform;
+ -o-transition-property: transform;
+ transition-property: transform;
+ transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: $transition-time;
+       -o-transition-duration: $transition-time;
+          transition-duration: $transition-time;
+  -webkit-transition-timing-function: $transition-function;
+       -o-transition-timing-function: $transition-function;
+          transition-timing-function: $transition-function;
+}
+.portfolio-projects-list-link:hover .projects-name-description,
+.portfolio-projects-list-link:focus .projects-name-description{
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  }

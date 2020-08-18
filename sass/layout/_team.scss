@@ -1,0 +1,116 @@
+/*TEAM SECTION*/
+.team {
+    background-color: $rectangle-background-color;
+    min-width: 1200px;
+  }
+  
+  .team .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .team .subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-light-theme-color;
+  }
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .team-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .team-list-item {
+    background-color: $title-dark-theme-color;
+    -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+            box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .team-list-item-photo {
+    margin-bottom: 30px;
+  }
+  .team .subtitle {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+  .team .description {
+    margin-top: 0px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+  .team-list-item-social-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 24px;
+  }
+  .team-list-item-social-list-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .social-list-link-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    background-color: none;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+  -webkit-transition-duration: $transition-time;
+       -o-transition-duration: $transition-time;
+          transition-duration: $transition-time;
+  -webkit-transition-timing-function: $transition-function;
+       -o-transition-timing-function: $transition-function;
+          transition-timing-function: $transition-function;
+  }
+  .team-list-item-social-list-link:hover .social-list-link-block,
+  .team-list-item-social-list-link:focus .social-list-link-block {
+    background-color: $svg-color-accent;  
+    }
+  
+  .team-list-item-social-list-link:hover .social-list-link-icons,
+  .team-list-item-social-list-link:focus .social-list-link-icons {
+    fill: $title-dark-theme-color;
+   }
+  .social-list-link-icons {
+    width: 20px;
+    height: 20px;
+    fill: $svg-color;
+    -webkit-transition-property: fill;
+    -o-transition-property: fill;
+    transition-property: fill;
+  -webkit-transition-duration: $transition-time;
+       -o-transition-duration: $transition-time;
+          transition-duration: $transition-time;
+  -webkit-transition-timing-function: $transition-function;
+       -o-transition-timing-function: $transition-function;
+          transition-timing-function: $transition-function;
+    }
