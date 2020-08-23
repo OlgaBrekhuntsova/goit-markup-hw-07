@@ -27,14 +27,15 @@
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-  }
-  .hero .container {
+  
+    .container {
      padding-top: 200px;
     padding-bottom: 200px;
-    padding-left: 237px;
-    padding-right: 237px;
+    padding-left: 300px;
+    padding-right: 300px;
     text-align: center;
   }
+}
   
   .hero-title {
     margin-top: 0px;
@@ -42,39 +43,13 @@
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: $title-dark-theme-color;
   }
-  .modal-btn {
-    height: 50px;
-    width: 200px;
-    border-radius: 4px;
-    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border:0;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    text-align: center;
-    letter-spacing: 0.06em;
-    color: $title-dark-theme-color;
-    background-color: $accent-color;
-    -webkit-transition-property: background;
-    -o-transition-property: background;
-    transition-property: background;
-    -webkit-transition-duration: $transition-time;
-         -o-transition-duration: $transition-time;
-            transition-duration: $transition-time;
-    -webkit-transition-timing-function: $transition-function;
-         -o-transition-timing-function: $transition-function;
-            transition-timing-function: $transition-function;
-  }
-  .modal-btn:hover {
-    outline: none;
-  }
+
   .hero .modal-btn:hover,
   .hero .modal-btn:focus {
   background:#188CE8;
   }
+

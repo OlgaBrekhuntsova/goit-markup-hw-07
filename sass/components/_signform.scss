@@ -8,6 +8,17 @@
   display: block;}
   
   .form-sign-input {
+    &,
+    &::-webkit-input-placeholder, 
+    &::-moz-placeholder,
+    &:-ms-input-placeholder,
+    &::-ms-input-placeholder,
+    &::placeholder {
+   font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: $text-dark-theme-color;
+    }  
   display: block;
   width: 358px;
   height: 50px;
@@ -16,44 +27,11 @@
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: none;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
+  
   padding-left: 16px;
   background-color: transparent;
-    }
-    .form-sign-input::-webkit-input-placeholder {
-   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
-    }
-    .form-sign-input::-moz-placeholder {
-   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
-    }
-    .form-sign-input:-ms-input-placeholder {
-   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
-    }
-    .form-sign-input::-ms-input-placeholder {
-   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
-    }
-    .form-sign-input::placeholder {
-   font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: $text-dark-theme-color;
-    }
-  
-    footer .form-sign-button {
+
+  }
+    .form-sign-button {
       margin-left: 12px;
     }
