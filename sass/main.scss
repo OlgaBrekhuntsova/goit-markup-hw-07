@@ -5,6 +5,7 @@
 @import "./utils/mixins";
 @import "./utils/hidden";
 @import "./base/base";
+@import "./components/font-bgc";
 @import "./components/container";
 @import "./components/logo";
 @import "./components/title";
@@ -19,5 +20,4 @@
 @import "./layout/specialization";
 @import "./layout/team";
 @import "./layout/customers";
-@import "./pages/portfolio"; 
 @import "./layout/footer";
