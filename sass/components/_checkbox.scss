@@ -18,14 +18,13 @@
    }
   
   .form-custom-checkbox {
-    display: block;
+    display: flex;
     width: 16px;
     height: 15px;
     border: 1.5px solid $title-light-theme-color;
     border-radius: 2px;
     margin-right: 8px;
     background-color: transparent;
-    background-image: url(../images/icons/checked.svg);
     background-origin: border-box;
     background-position: 1.5px 2.5px;
     background-repeat: no-repeat;
@@ -37,3 +36,11 @@
         background-color: $svg-color-accent;
              }
             }
+
+.checkbox-icon {
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-top: 2px;
+    fill: $title-dark-theme-color;
+             }
+           
