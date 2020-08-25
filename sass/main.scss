@@ -1,10 +1,8 @@
 @import "./utils/normalize";
 @import "./base/base";
 @import "./utils/variables";
-@import "./utils/placeholders";
 @import "./utils/mixins";
-@import "./utils/hidden";
-@import "./base/base";
+@import "./utils/placeholders";
 @import "./components/font-bgc";
 @import "./components/container";
 @import "./components/logo";
@@ -13,9 +11,12 @@
 @import "./components/link";
 @import "./components/button";
 @import "./components/modal";
+@import "./components/checkbox";
+@import "./components/social-links";
 @import "./components/signform";
 @import "./layout/header";
 @import "./layout/hero";
+@import "./layout/_contact-form";
 @import "./layout/features";
 @import "./layout/specialization";
 @import "./layout/team";

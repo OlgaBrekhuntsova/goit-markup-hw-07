@@ -1,37 +1,24 @@
 /*HEADER*/
   .header {
     .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
+     display: flex;
             align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
+         justify-content: space-between;
      }
      .logo {
       padding-top: 24px;
       padding-bottom: 25px;
       margin-right: 85px;
-    } 
-  }
+      color: $title-light-theme-color;
+      }
+      }
   .navigation {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .nav-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .nav-list-item:not(:last-child) {
     margin-right: 50px;
@@ -46,17 +33,10 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $title-light-theme-color;
-      -webkit-transition-property: color;
-      -o-transition-property: color;
       transition-property: color;
-  -webkit-transition-duration: $transition-time;
-       -o-transition-duration: $transition-time;
-          transition-duration: $transition-time;
-  -webkit-transition-timing-function: $transition-function;
-       -o-transition-timing-function: $transition-function;
-          transition-timing-function: $transition-function;
-      
-        }
+      @include animation ();
+              }
+
         .current { 
           color: $accent-color;
         &::after {
@@ -72,22 +52,14 @@
               }
         
   .header-adress-list {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
             align-items: center;
   }
   .header-adress-list-item:not(:last-child) {
     margin-right: 30px;
   }
   .header-adress-list-item-link {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
             align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -96,15 +68,8 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: $text-light-theme-color;
-    -webkit-transition-property: color;
-    -o-transition-property: color;
     transition-property: color;
-    -webkit-transition-duration: $transition-time;
-         -o-transition-duration: $transition-time;
-            transition-duration: $transition-time;
-    -webkit-transition-timing-function: $transition-function;
-         -o-transition-timing-function: $transition-function;
-            transition-timing-function: $transition-function;
+    @include animation ();
             .mail {
               width: 16px;
               height: 11px;
@@ -117,15 +82,8 @@
   .header-adress-icon {
     margin-right: 10px;
     fill: $text-light-theme-color;
-    -webkit-transition-property: fill;
-    -o-transition-property: fill;
     transition-property: fill;
-    -webkit-transition-duration: $transition-time;
-         -o-transition-duration: $transition-time;
-            transition-duration: $transition-time;
-    -webkit-transition-timing-function: $transition-function;
-         -o-transition-timing-function: $transition-function;
-            transition-timing-function: $transition-function;
+    @include animation ();
 
             .header-adress-list-item-link:hover &,
             .header-adress-list-item-link:focus & {

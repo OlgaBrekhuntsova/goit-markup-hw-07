@@ -1,4 +1,4 @@
- /* MODAL WINDOW CONTACT FORM */
+ /* MODAL WINDOW */
 
  .backdrop {
     position: fixed;
@@ -9,67 +9,35 @@
     background-color: rgba(0, 0, 0, 0.2);
    z-index: 100;
    opacity: 1;
-    -webkit-transition: opacity $transition-time $transition-function, visibility $transition-time $transition-function;
-    -o-transition: opacity $transition-time $transition-function, visibility $transition-time $transition-function;
-    transition: opacity $transition-time $transition-function, visibility $transition-time $transition-function; 
-    
-    .form-layout {
+    transition-property: opacity, visibility;
+    @include animation ();
+   
+    &.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;   
+    }
+  }
+
+  .form-layout {
       position:absolute;
       top:50%;
       left: 50%;
-       -webkit-transform: translate(-50%, -50%) scale(1);
-           -ms-transform: translate(-50%, -50%) scale(1);
-               transform: translate(-50%, -50%) scale(1);
-       -webkit-transition: -webkit-transform $transition-time $transition-function;
-       transition: -webkit-transform $transition-time $transition-function;
-       -o-transition: transform $transition-time $transition-function;
-       transition: transform $transition-time $transition-function;
-       transition: transform $transition-time $transition-function, -webkit-transform $transition-time $transition-function; 
+      transform: translate(-50%, -50%) scale(1);
+      transition-property: transform;
+      @include animation ();
        padding: 40px;
        width: 528px;
      height: 581px;
      background: $title-dark-theme-color;
-     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
      border-radius: 4px;
-     }
+      
+    .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0.8);
+    }  
+  }
 
-    &.is-hidden {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-       
-      .form-layout {
-        -webkit-transform: translate(-50%, -50%) scale(0.8);
-            -ms-transform: translate(-50%, -50%) scale(0.8);
-                transform: translate(-50%, -50%) scale(0.8);
-           }  
-            } 
-    }
-  
-  .contact-form {
-       display: -webkit-box;
-       display: -ms-flexbox;
-       display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-
-     .modal-btn {
-              margin-left: auto;
-              margin-right: auto;
-
-      &:hover,
-      &:focus {
-            background:#188CE8;
-            }
-          }
-    }
-  
   .modal-close-btn {
     position: absolute;
     top: 8px;
@@ -81,181 +49,17 @@
     outline: none;
     width: 30px;
     height: 30px;
-
-    .close-icon {
-      display: block;
-      width: 18px;
-      height: 18px;
-     margin: auto;
-      fill: #000000;
-      -webkit-transition: fill $transition-time $transition-function;
-      -o-transition: fill $transition-time $transition-function;
-      transition: fill $transition-time $transition-function; 
-        .modal-close-btn:hover &,
-    .modal-close-btn:focus & {
-      fill: $svg-color-accent;
-    }
-  } 
-  }
-  
-  .contact-form-title {
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  letter-spacing: 0.03em;
-  color: $title-light-theme-color;
-  }
-  
-  .modal-form-input-wrapper {
-  position: relative;
-  margin-bottom: 28px;
-
-  .name {
-    text-transform: capitalize;
-    }
-  }
-  
-  .form-input {
-  @extend %form-input-comment;
-  height: 40px;
-  padding-left: 42px;
-    &:focus,
-  &:hover,
-  &:not(:placeholder-shown) {
-    @extend %form-input-comment-hover;
-  }
-  }
-  
-.form-comment {
-  @extend %form-input-comment;
-    height: 120px;
-    padding-left: 16px;
-    padding-top: 12px;
-    padding-right: 16px;
-    padding-bottom: 12px;
-    margin-bottom: 20px;
-    resize: none;
-    &:focus,
-  &:hover,
-  &:not(:placeholder-shown) {
-   @extend %form-input-comment-hover;
-  }
-
-  &::-webkit-input-placeholder,
-  &::-moz-placeholder,
-  &:-ms-input-placeholder,
-  &::-ms-input-placeholder,
-  &::placeholder {
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.01em;
-    color: $text-light-theme-color;
-    }
-       }
-    .form-label {
-    position: absolute;
-    top: 50%;
-    left: 42px;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    font-size: 14px;
-    line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: $text-light-theme-color;
-  -webkit-transition: color $transition-time $transition-function, font-size $transition-time $transition-function, -webkit-transform $transition-time $transition-function;
-  transition: color $transition-time $transition-function, font-size $transition-time $transition-function, -webkit-transform $transition-time $transition-function;
-  -o-transition: transform $transition-time $transition-function, color $transition-time $transition-function, font-size $transition-time $transition-function;
-  transition: transform $transition-time $transition-function, color $transition-time $transition-function, font-size $transition-time $transition-function;
-  transition: transform $transition-time $transition-function, color $transition-time $transition-function, font-size $transition-time $transition-function, -webkit-transform $transition-time $transition-function; 
-  
-  .form-input:focus + &,
-  .form-input:not(:placeholder-shown) + & {
-     color: $accent-color;
-     -webkit-transform: translate(-26px, -39px);
-         -ms-transform: translate(-26px, -39px);
-             transform: translate(-26px, -39px);
-     font-size: 12px;
-     }
-  }
-  
-  .form-label-icon {
-    position: absolute;
-    left: 16px;
+  }  
+  .close-icon {
     display: block;
     width: 18px;
     height: 18px;
-    margin: auto;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    fill: $title-light-theme-color;
-    -webkit-transition: fill $transition-time $transition-function;
-    -o-transition: fill $transition-time $transition-function;
-    transition: fill $transition-time $transition-function;
-
-    .form-input:focus ~ &,
-    .form-input:not(:placeholder-shown) ~ & {
-     fill: $svg-color-accent;
-    }
-     }
-          
- 
-  /* .checkbox {
-    appearance: none;
-    -moz-appearance: none;
-  -webkit-appearance: none;
-  position: absolute;
-  } */
-  
-  .form-checkbox {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-
-    &:checked + .form-custom-checkbox {
-      background-image: url(../images/icons/checked.svg);
-      background-color: $svg-color-accent;
-      border-radius: 2px;
-    }
-  }
-  
-  .form-agreement-label {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  
-  .form-custom-checkbox {
-    display: block;
-    width: 16px;
-    height: 15px;
-    background-image: url(../images/icons/not-checked.svg);
-    margin-right: 8px;
-    -webkit-transition: background-color $transition-time $transition-function;
-    -o-transition: background-color $transition-time $transition-function;
-    transition: background-color $transition-time $transition-function;
-      }
+   margin: auto;
+    fill: #000000;
+    transition-property: fill; 
+    @include animation ();
     
-  .agreement {
-  line-height: 1.71px;
-  
-   a {
-    color: $accent-color;
-  }
-}
- 
+  .modal-close-btn:hover &,
+  .modal-close-btn:focus & {
+    fill: $svg-color-accent;
+  }}

@@ -1,29 +1,18 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v7.0.29,
-* Autoprefixer: v9.7.6
-* Browsers: last 4 version
-*/
-
 html {
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+               box-sizing: border-box;
   }
   
   *,
   *::before,
   *::after {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit;
+              box-sizing: inherit;
   }
-
-
 
   img {
     display: block;
   }
 
-  button:hover,
+button:hover,
 button:focus,
 input:hover,
 input:focus,

@@ -8,9 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
-    <!-- <link rel="stylesheet" href="./css/normalize.css" /> -->
-  </head>
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
+      </head>
 
   <body>
     <!--Шапка сайта-->
@@ -81,29 +80,18 @@
           <h2 class="portfolio-filters-title" hidden>
             Фильтры портфолио
           </h2>
-          <ul class="portfolio-filters-list list">
-            <li class="portfolio-filters-list-item">
-              <button class="portfolio-modal-btn" type="button">Все</button>
-            </li>
-            <li class="portfolio-filters-list-item">
-              <button class="portfolio-modal-btn" type="button">
-                Веб-сайты
-              </button>
-            </li>
-            <li class="portfolio-filters-list-item">
-              <button class="portfolio-modal-btn" type="button">
-                Приложения
-              </button>
-            </li>
-            <li class="portfolio-filters-list-item">
-              <button class="portfolio-modal-btn" type="button">Дизайн</button>
-            </li>
-            <li class="portfolio-filters-list-item">
-              <button class="portfolio-modal-btn" type="button">
-                Маркетинг
-              </button>
-            </li>
-          </ul>
+          <div role="group" class="filters-list">
+            <label for="all" class="filter-label">Все
+            <input id="all" class="filter-btn" name="portfolio" type="radio" value="all" checked /></label>
+            <label for="web" class="filter-label"> Веб-сайты
+            <input id="web" class="filter-btn" name="portfolio" type="radio" value="web" /></label>
+            <label for="apps" class="filter-label">Приложения
+            <input id="apps" class="filter-btn" name="portfolio" type="radio" value="apps" /></label>
+            <label for="dsgn" class="filter-label">Дизайн
+            <input id="dsgn" class="filter-btn" name="portfolio" type="radio" value="dsgn" /></label>
+            <label for="marketing" class="filter-label">Маркетинг
+            <input id="marketing" class="filter-btn" name="portfolio" type="radio" value="marketing" /></label>
+          </div>
         </div>
       </section>
       <!--Секция результатов фильтра портфолио-->
@@ -434,45 +422,45 @@
         <div class="footer-social">
           <p class="title"><b>присоединяйтесь</b></p>
           <!--Блок социальных ссылок-->
-          <ul class="footer-social-list list">
-            <li class="footer-social-list-item">
+          <ul class="footer-social-list social-list list">
+            <li class="footer-social-list-item social-list-item">
               <a
                 class="footer-social-list-item-link link"
                 href=""
                 aria-label="ссылка на инстагам"
               >
                 <div
-                  class="footer-social-list-item-link-block icon-insta"
-                ><svg class="social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-instagram"></use></svg></div>
+                  class="footer-social-list-item-link-block social-list-link-block"
+                ><svg class="footer-social-list-link-icons social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-instagram"></use></svg></div>
               </a>
             </li>
-            <li class="footer-social-list-item">
+            <li class="footer-social-list-item social-list-item">
               <a
                 class="footer-social-list-item-link link"
                 href=""
                 aria-label="ссылка на твиттер"
               >
                 <div
-                  class="footer-social-list-item-link-block icon-twitter"
-                ><svg class="social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-twitter"></use></svg></div>
+                  class="footer-social-list-item-link-block social-list-link-block"
+                ><svg class="footer-social-list-link-icons social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-twitter"></use></svg></div>
               </a>
             </li>
-            <li class="footer-social-list-item">
+            <li class="footer-social-list-item social-list-item">
               <a
                 class="footer-social-list-item-link link"
                 href=""
                 aria-label="ссылка на фейсбук"
               >
-                <div class="footer-social-list-item-link-block icon-fb"><svg class="social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-facebook"></use></svg></div>
+                <div class="footer-social-list-item-link-block social-list-link-block"><svg class="footer-social-list-link-icons social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-facebook"></use></svg></div>
               </a>
             </li>
-            <li class="footer-social-list-item">
+            <li class="footer-social-list-item social-list-item">
               <a
                 class="footer-social-list-item-link link"
                 href=""
                 aria-label="ссылка на линкт-ин"
               >
-                <div class="footer-social-list-item-link-block icon-ldn"><svg class="social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-linkedin"></use></svg></div>
+                <div class="footer-social-list-item-link-block social-list-link-block"><svg class="footer-social-list-link-icons social-list-link-icons"> <use href="./images/icons/sprite.svg#icon-linkedin"></use></svg></div>
               </a>
             </li>
           </ul>
@@ -483,13 +471,13 @@
               <b>Подпишитесь на рассылку</b> </label>
               <div class="form-sign-input-wrapper">
               <input class="form-sign-input" type="email" name="sign-mail" id="sign-mail" placeholder="E-mail" autocomplete="on" required>
-              <button type="submit" class="modal-btn form-sign-button">Подписаться
-                <svg class="footer-sign-modal-btn-send"><use href="./images/icons/sprite.svg#icon-send"></use></svg>
+              <button type="submit" class="modal-btn form-sign-btn">Подписаться
+                <svg class="sign-btn-send-icon"><use href="./images/icons/sprite.svg#icon-send"></use></svg>
               </button>
             </div>
             </form>
           </div>
       </div>
-         </footer>
+    </footer>
   </body>
 </html>
